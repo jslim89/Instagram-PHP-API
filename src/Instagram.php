@@ -566,7 +566,7 @@ class Instagram
                 return $this->_makeCall($function, array('max_tag_id' => $obj->pagination->next_max_tag_id, 'count' => $count));
             }
 
-            return $this->_makeCall($function, array('next_max_id' => $obj->pagination->next_max_id, 'count' => $count));
+            return $this->_makeCall($function, array('max_id' => $obj->pagination->next_max_id, 'count' => $count));
         }
         throw new InstagramException("Error: pagination() | This method doesn't support pagination.");
     }
